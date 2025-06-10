@@ -19,15 +19,20 @@ public class Houses {
 		
 		rob.penDown();
 		rob.setSpeed(10);
-		house("small");
+		drawpointyroof("small");
 		house("large");
-		house("small");
-		house("medium");
+		drawpointyroof("small");
+		drawpointyroof("small");
 		house("large");
-		house("small");
-		house("medium");
+		drawpointyroof("small");
+		drawpointyroof("small");
 		house("large");
-		house("small");
+		drawpointyroof("small");
+		
+		
+	
+		
+		
 		
 		
 		
@@ -38,21 +43,19 @@ public class Houses {
 		
 	
 		
-		static void house(String height, String color ) {
+		
+
+
+
+
+		static void house(String height ) {
 			int h = 0;
-			if(height.equals("small")) {
-				h = 60;
-			}
-			
-			
-			if(height.equals("medium")) {
-			h = 120;
-			}
 			
 			
 			if(height.equals("large")) {
 				h = 250;
 			}
+			
 			
 			rob.turn(-90);
 			rob.move(20);
@@ -64,10 +67,36 @@ public class Houses {
 			rob.move(h);
 			rob.turn(180);
 			
+			
+			rob.setRandomPenColor();
+			
 		}
 			
+		static void drawpointyroof(String peak) {
+			
+			int i=0;
+			if(peak.equals("small")){
+				i = 60;
+			}
+			
+			if(peak.equals("medium")){
+				i = 120;
+			}
+			
+			rob.turn(-90);
+			rob.move(20);
+			rob.turn(90);
+			rob.move(100);
+			rob.turn(-45);
+			rob.move(20);
+			rob.turn(-90);
+			rob.move(20);
+			rob.turn(-45);
+			rob.move(100);
+			rob.turn(180);
+		rob.setRandomPenColor();	
 
-	
+}
 		
 		
 
