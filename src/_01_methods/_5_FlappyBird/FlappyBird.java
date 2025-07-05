@@ -7,6 +7,7 @@ public class FlappyBird extends PApplet {
     static final int WIDTH = 800;
     static final int HEIGHT = 600;
     PImage bird;
+    PImage flappyBackground;
     int x = 50;
     int y;
     int birdYVelocity = -10;
@@ -14,8 +15,9 @@ public class FlappyBird extends PApplet {
    int  pipeX = 800;
 
 int upperPipeHeight = (int) random(100, 400);
-int pipeGap = 140;
+int pipeGap = 170;
 int lowerY = upperPipeHeight + pipeGap;
+
 
     @Override
     public void settings() {
@@ -23,6 +25,9 @@ int lowerY = upperPipeHeight + pipeGap;
         bird = loadImage("images/bird.png");
     	bird.resize(40, 40);
 
+    	
+    	flappyBackground = loadImage("images/flappyBackground.jpg");
+    	flappyBackground.resize(800, 600);
     }
 
     @Override
@@ -32,8 +37,8 @@ int lowerY = upperPipeHeight + pipeGap;
 
     @Override
     public void draw() {
+    	background(flappyBackground);
     	
-    	background(255, 0, 0, 200);
     	
         image(bird, x, y);
         y+=birdYVelocity;
