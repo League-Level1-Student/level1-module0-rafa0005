@@ -10,7 +10,7 @@ public class FlappyBird extends PApplet {
 	PImage flappyBackground;
 	int x = 50;
 	int y;
-	int birdYVelocity = -10;
+	int birdYVelocity = -8;
 	int gravity = 1;
 	int pipeX = 800;
 
@@ -47,7 +47,7 @@ public class FlappyBird extends PApplet {
 		fill(0, 255, 0, 200);
 		rect(pipeX, 0, 70, upperPipeHeight);
 		rect(pipeX, lowerY, 70, 600 - (upperPipeHeight + pipeGap));
-		pipeX -= 3;
+		pipeX -= 3 + score / 2;
 
 		teleportPipes();
 		boolean crazy = intersectsPipes();
@@ -57,8 +57,9 @@ public class FlappyBird extends PApplet {
 		if (pipeX < 0 && pipeCleared == false) {
 			pipeCleared = true;
 			score++;
+			pipeGap -= 4;
 		}
-
+			
 	}
 
 	public void teleportPipes() {
