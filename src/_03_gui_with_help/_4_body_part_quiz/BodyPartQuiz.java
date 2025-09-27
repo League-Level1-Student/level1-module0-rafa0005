@@ -43,8 +43,8 @@ public class BodyPartQuiz {
 	String eighteenthImage = "src/_03_gui_with_help/_4_body_part_quiz/peter parker.jpg";
 	String nineteenthImage = "src/_03_gui_with_help/_4_body_part_quiz/milesmorales.jpg";
 	String twentiethImage = "src/_03_gui_with_help/_4_body_part_quiz/odin.jpg";
-	String twentyfirstImage = "src/_03_gui_with_help/_4_body_part_quiz/zeus.jpg";
-	String twentysecondImage = "src/_03_gui_with_help/_4_body_part_quiz/loki/atreus.jpg";
+	String twentyfirstImage = "src/_03_gui_with_help/_4_body_part_quiz/shadow.jpg";
+	String twentysecondImage = "src/_03_gui_with_help/_4_body_part_quiz/loki.jpg";
 	String twentythirdImage = "src/_03_gui_with_help/_4_body_part_quiz/hades.jpg";
 	String twentyfourthImage = "src/_03_gui_with_help/_4_body_part_quiz/poseidon.jpg";
 	String twentyfifthImage = "src/_03_gui_with_help/_4_body_part_quiz/zeus.jpg";
@@ -211,11 +211,11 @@ public class BodyPartQuiz {
 			JOptionPane.showMessageDialog(null, "you are correct");
 		}
 		else {
-			JOptionPane.showMessageDialog(null, "venom from spiderman 2");
+			JOptionPane.showMessageDialog(null, "you are incorrect");
 		}
 		showNextImage();
 		guess = JOptionPane.showInputDialog("who is this and which game are they from?");
-		if(guess.equalsIgnoreCase("peter parker from spiderman 2")) {
+		if(guess.equalsIgnoreCase("venom from spiderman 2")) {
 			JOptionPane.showMessageDialog(null, "you are correct");
 		}
 		else {
@@ -223,7 +223,7 @@ public class BodyPartQuiz {
 		}
 		showNextImage();
 		guess = JOptionPane.showInputDialog("who is this and which game are they from?");
-		if(guess.equalsIgnoreCase("miles morales from spiderman 2")) {
+		if(guess.equalsIgnoreCase("peter parker from spiderman 2")) {
 			JOptionPane.showMessageDialog(null, "you are correct");
 			}
 		else {
@@ -231,11 +231,27 @@ public class BodyPartQuiz {
 		}
 		showNextImage();
 		guess = JOptionPane.showInputDialog("who is this and which game are they from?");
-		if(guess.equalsIgnoreCase("odin from god of war ragnarok")) {
+		if(guess.equalsIgnoreCase("miles morales from spiderman 2")) {
 			JOptionPane.showMessageDialog(null, "you are correct");
 		}
 		else {
-			JOptionPane.showMessageDialog(null, "shadow from shadow generations");
+			JOptionPane.showMessageDialog(null, "you are incorrect");
+		}
+		showNextImage();
+		guess = JOptionPane.showInputDialog("who is this and which game are they from?");
+		if(guess.equalsIgnoreCase("odin from god of war rangarok ")) {
+			JOptionPane.showMessageDialog(null, "you are correct");
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "you are incorrect");
+		}
+		showNextImage();
+		guess = JOptionPane.showInputDialog("who is this and which game are they from?");
+		if(guess.equalsIgnoreCase("shadow from shadow generations")) {
+			JOptionPane.showMessageDialog(null, "you are correct");
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "you are incorrect");
 		}
 		showNextImage();
 		guess = JOptionPane.showInputDialog("who is this and which game are they from?");
@@ -280,7 +296,7 @@ public class BodyPartQuiz {
 		// 8. .... repeat 4-7 for all your images.....
 
 		// 9. Show them their current score
-
+		
 	}
 
 	public void showNextImage() {
